@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Travel Expense Tracker</h1>
+
+    <section id="trip-setup">
+        <h2>Setup Trip</h2>
+        <div>
+            <label for="participant-names">Participant Names (comma separated)</label>
+            <input type="text" id="participant-names" placeholder="Alice,Bob,Charlie" />
+            <button id="setup-trip">Create Trip</button>
+        </div>
+    </section>
+
+    <section id="expense-entry" style="display:none;">
+        <h2>Add Expense</h2>
+        <div>
+            <label for="expense-date">Date</label>
+            <input type="date" id="expense-date" />
+        </div>
+        <div>
+            <label for="expense-desc">Description</label>
+            <input type="text" id="expense-desc" />
+        </div>
+        <div>
+            <label for="expense-amount">Amount</label>
+            <input type="number" id="expense-amount" step="0.01" />
+        </div>
+        <div>
+            <label for="expense-payer">Paid By</label>
+            <select id="expense-payer"></select>
+        </div>
+        <button id="add-expense">Add Expense</button>
+    </section>
+
+    <section id="summary" style="display:none;">
+        <h2>Summary</h2>
+        <button id="show-summary">Refresh Summary</button>
+        <pre id="summary-output"></pre>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
